@@ -1113,7 +1113,7 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		40A05069BB05768CE4609856F7188AE8 /* Release */ = {
+		31AF8C27DBD7B1FCF8335551861A3585 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FB59519769E69B952F83C02D21BD1EFD /* Pods-ASTextNodeTest.release.xcconfig */;
 			buildSettings = {
@@ -1128,6 +1128,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-ASTextNodeTest/Pods-ASTextNodeTest.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
@@ -1141,35 +1142,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		596420B4739E83AADD0AFF67B2313ECC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5AE2767BD4BAD0B67822D17A212E32F4 /* Pods-ASTextNodeTest.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-ASTextNodeTest/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-ASTextNodeTest/Pods-ASTextNodeTest.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_ASTextNodeTest;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		77B3898028F6FFC00C2527E9B35ED9B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1234,6 +1206,36 @@
 				ONLY_ACTIVE_ARCH = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		BB4E7B8050F1CC38F75CA7BD4D987C59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AE2767BD4BAD0B67822D17A212E32F4 /* Pods-ASTextNodeTest.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ASTextNodeTest/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ASTextNodeTest/Pods-ASTextNodeTest.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_ASTextNodeTest;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
@@ -1313,8 +1315,8 @@
 		65E3A3A837CA454071B4CB6F0D94D8E5 /* Build configuration list for PBXNativeTarget "Pods-ASTextNodeTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				596420B4739E83AADD0AFF67B2313ECC /* Debug */,
-				40A05069BB05768CE4609856F7188AE8 /* Release */,
+				BB4E7B8050F1CC38F75CA7BD4D987C59 /* Debug */,
+				31AF8C27DBD7B1FCF8335551861A3585 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
