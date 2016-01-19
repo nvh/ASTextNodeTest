@@ -41,7 +41,7 @@ class TestContainerNode: ASCellNode {
     }
     
     override func layoutSpecThatFits(constrainedSize: ASSizeRange) -> ASLayoutSpec {
-        let insetSpec = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 30, left: 100, bottom: 30, right: 100), child: subnode)
+        let insetSpec = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 30, left: 30, bottom: 30, right: 30), child: subnode)
         return insetSpec
     }
 }
@@ -51,14 +51,14 @@ class TestSubnode: ASDisplayNode {
     
     override init() {
         topicTextNode = ASTextNode()
+        topicTextNode.backgroundColor = UIColor.lightGrayColor()
         let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.alignment = .Center
+        paragraphStyle.firstLineHeadIndent = 20
+        paragraphStyle.headIndent = 10
         let topicAttr: [String: AnyObject] = [NSParagraphStyleAttributeName: paragraphStyle]
-        topicTextNode.attributedString = NSAttributedString(string: "TEST TEST TEST", attributes: topicAttr)
+        topicTextNode.attributedString = NSAttributedString(string: "AsyncDisplayKit is an iOS framework that keeps even the most complex user interfaces smooth and responsive. It was originally built to make Facebook's Paper possible, and goes hand-in-hand with pop's physics-based animations — but it's just as powerful with UIKit Dynamics and conventional app designs.", attributes: topicAttr)
         
         // Remove the attributes, the issue goes away.
-        // Looks like the attributes "thinks" the node has a bigger size, so the text is centered in a bigger frame rather than its actual frame.
-        // Scroll down and up again(re-render the cell), the issue also goes away.
 //        topicTextNode.attributedString = NSAttributedString(string: "TEST")
 
         super.init()
