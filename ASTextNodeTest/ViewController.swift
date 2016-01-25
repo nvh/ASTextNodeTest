@@ -53,10 +53,11 @@ class TestSubnode: ASDisplayNode {
         topicTextNode = ASTextNode()
         topicTextNode.backgroundColor = UIColor.lightGrayColor()
         let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.firstLineHeadIndent = 20
-        paragraphStyle.headIndent = 10
-        let topicAttr: [String: AnyObject] = [NSParagraphStyleAttributeName: paragraphStyle]
-        topicTextNode.attributedString = NSAttributedString(string: "AsyncDisplayKit is an iOS framework that keeps even the most complex user interfaces smooth and responsive. It was originally built to make Facebook's Paper possible, and goes hand-in-hand with pop's physics-based animations — but it's just as powerful with UIKit Dynamics and conventional app designs.", attributes: topicAttr)
+        let font = UIFont.italicSystemFontOfSize(30)
+        paragraphStyle.firstLineHeadIndent = 10
+//        paragraphStyle.headIndent = 10
+        let topicAttr: [String: AnyObject] = [NSParagraphStyleAttributeName: paragraphStyle, NSFontAttributeName:font]
+        topicTextNode.attributedString = NSAttributedString(string: "AsyncDisplayKit", attributes: topicAttr)
         
         // Remove the attributes, the issue goes away.
 //        topicTextNode.attributedString = NSAttributedString(string: "TEST")
