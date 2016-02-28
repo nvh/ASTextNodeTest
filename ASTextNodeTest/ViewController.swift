@@ -41,7 +41,7 @@ class TestContainerNode: ASCellNode {
     }
     
     override func layoutSpecThatFits(constrainedSize: ASSizeRange) -> ASLayoutSpec {
-        let insetSpec = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 30, left: 30, bottom: 30, right: 30), child: subnode)
+        let insetSpec = ASInsetLayoutSpec(insets: UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15), child: subnode)
         return insetSpec
     }
 }
@@ -53,15 +53,12 @@ class TestSubnode: ASDisplayNode {
         topicTextNode = ASTextNode()
         topicTextNode.backgroundColor = UIColor.lightGrayColor()
         let paragraphStyle = NSMutableParagraphStyle()
-        let font = UIFont.italicSystemFontOfSize(30)
-        paragraphStyle.firstLineHeadIndent = 10
-//        paragraphStyle.headIndent = 10
+        let font = UIFont.boldSystemFontOfSize(26)
+        // When disabling the hypenationFactor, this issue goes away
+        paragraphStyle.hyphenationFactor = 0.5
         let topicAttr: [String: AnyObject] = [NSParagraphStyleAttributeName: paragraphStyle, NSFontAttributeName:font]
-        topicTextNode.attributedString = NSAttributedString(string: "AsyncDisplayKit", attributes: topicAttr)
+        topicTextNode.attributedString = NSAttributedString(string: "This should not 'Nederlandse bombardementen' cut off", attributes: topicAttr)
         
-        // Remove the attributes, the issue goes away.
-//        topicTextNode.attributedString = NSAttributedString(string: "TEST")
-
         super.init()
 
         self.addSubnode(topicTextNode)
